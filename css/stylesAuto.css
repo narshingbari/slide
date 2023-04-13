@@ -1,0 +1,238 @@
+@import url('http://fonts.googleapis.com/css?family=Ubuntu:regular,italic,bold,bolditalic&subset=cyrillic,greek,latin');
+@import url('reset.css');
+@font-face {
+    font-family: "OswaldLight";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../font/Oswald-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../font/Oswald-Light-webfont.woff") format("woff"), url("../font/Oswald-Light-webfont.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "OswaldBook";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../font/Oswald-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../font/Oswald-Regular-webfont.woff") format("woff"), url("../font/Oswald-Regular-webfont.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "OswaldBold";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../font/Oswald-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../font/Oswald-Bold-webfont.woff") format("woff"), url("../font/Oswald-Bold-webfont.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "OswaldStencilRegular";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../font/Oswald-Stencil-webfont.eot?#iefix") format("embedded-opentype"), url("../font/Oswald-Stencil-webfont.woff") format("woff"), url("../font/Oswald-Stencil-webfont.ttf") format("truetype");
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Ubuntu', Tahoma;
+    line-height: 100%;
+    outline: none;
+    background: url(../images/3.jpg) no-repeat center center fixed;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+html {
+    border: 0px;
+}
+
+body {
+    color: #FFF;
+    font-size: 9pt;
+    cursor: default;
+    overflow: hidden;
+    background: url(../images/bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.brand {
+    font-family: Trebuchet MS, sans-serif;
+    font-size: 12px;
+}
+
+.clear {
+    clear: both;
+    padding: 0px;
+    margin: 0px;
+    height: 0px;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #121212;
+}
+
+a:hover {
+    color: #121212;
+}
+
+#cont {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 70;
+    overflow: auto;
+}
+
+.copy {
+    text-align: center;
+    padding: 10px 0px;
+    line-height: 150%;
+    font-family: 'Open sans', Sans-Serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: #121212;
+}
+
+#urlInfo {
+    font-family: OswaldLight, sans-serif;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+/* ========================================================
+   Top bar
+   ===================================================== */
+
+#header {
+    z-index: 10000;
+    max-height: 37px;
+    min-height: 27px;
+    line-height: 37px;
+    padding-bottom: 2px;
+    color: #ddd;
+    text-shadow: 0 -1px black;
+    margin-bottom: 40px;
+}
+
+#header .container {
+    max-width: 1004px;
+    min-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header a {
+    line-height: 36px;
+}
+
+#header ul {
+    list-style: none;
+}
+
+#header h1 {
+    float: left;
+    font-size: 16px;
+}
+
+#header h1,
+#header h1 a {
+    color: #eee;
+}
+
+#header h1 a {
+    display: block;
+    text-decoration: none;
+}
+
+#header h1 a:hover {
+    color: #fff;
+}
+
+#header #nav {
+    float: right;
+    border-left: 1px solid #2f4b56;
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+    border-right: 1px solid #111;
+    padding-top: 10px;
+}
+
+#header #nav li {
+    float: left;
+}
+
+#header #nav a {
+    max-height: 36px;
+    min-height: 26px;
+    display: block;
+    padding: 0 15px;
+    color: #d0d9de;
+    border-left: 1px solid #191919;
+    border-right: 1px solid #2f4b56;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#header #nav a:hover {
+    background: url(../img/topbar-hover.png);
+}
+
+.navbar .brand {
+    font-family: 'Open sans' Sans-Serif;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.navbar-inner {
+    border-radius: 0px;
+}
+
+#header #nav a img {
+    float: left;
+    margin-right: 12px;
+    margin-top: 11px;
+}
+
+#header #nav li.active a,
+#header #nav a:active {
+    border-bottom: 1px solid #ddd;
+    border-right: 0;
+    padding-right: 16px;
+}
+
+#header #nav span {
+    display: inline-block;
+    vertical-align: text-top;
+    line-height: 16px;
+    font-size: 11px;
+    padding: 0 5px;
+    color: #fff;
+    text-shadow: 0 1px #902a27;
+    border-radius: 2px;
+    margin-left: 10px;
+    background-color: #000;
+}
+
+div.header div img#logo {
+    float: left;
+}
+
+sup {
+    font-size: 13px;
+}
