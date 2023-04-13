@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Narshingbari Saddam Image Slider</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,700,600,300' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="css/stylesAuto.css" />
+    <link rel="stylesheet" href="css/iview.css" />
+    <link rel="stylesheet" href="css/skin 1/style2.css" />
+    <script src="js/jquery-1.7.1.min.js"></script>
+
+    <!--JS background ballon-->
+    <!--<script type="text/javascript" src="js/custom.js"></script>
+        <script type="text/javascript" src="js/pngFix.js"></script>
+        <script src="js/modernizr.custom.17475.js"></script>
+        <script type="text/javascript">
+            DD_belatedPNG.fix('.png-fix');
+        </script>-->
+    <!--End  background ballon-->
+
+
+    <script type="text/javascript" src="js/raphael-min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.js"></script>
+
+    <script src="js/scriptimg.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#iview').iView({
+                pauseTime: 22000,
+                directionNav: false,
+                controlNav: true,
+                tooltipY: -15
+            });
+        });
+    </script>
+    <style type="text/css">
+        #screen {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            overflow: hidden;
+        }
+
+        #screen img,
+        canvas {
+            position: absolute;
+            left: -9999px;
+            cursor: pointer;
+            image-rendering: optimizeSpeed;
+        }
+
+        #screen .href {
+            border: #FFF dotted 1px;
+        }
+
+        #screen .fog {
+            position: absolute;
+            background: #fff;
+            opacity: 0.1;
+            filter: alpha(opacity=10);
+        }
+
+        #command {
+            position: absolute;
+            left: 1em;
+            top: 1em;
+            width: 180px;
+            z-index: 30000;
+            background: url('img/black-Linen-opacity.png') repeat top left;
+            display: none;
+            border: #333 solid 1px;
+        }
+
+        #command .img-ribbon {
+            width: 60px;
+            z-index: 30000;
+            height: 49px;
+            left: -8px;
+        }
+
+        #bar {
+            position: relative;
+            left: 1em;
+            top: 1em;
+            margin-top: 40px;
+            height: 410px;
+        }
+
+        #bar .button {
+            position: absolute;
+            background: #222;
+            width: 70px;
+            height: 40px;
+            cursor: pointer;
+        }
+
+        #bar .loaded {
+            background: #333;
+        }
+
+        #bar .viewed {
+            background: #00b8d2;
+        }
+
+        #bar .selected {
+            background: #0075a0;
+        }
+
+        #urlInfo {
+            position: absolute;
+            background: url(images/r.png) no-repeat;
+            visibility: hidden;
+            z-index: 30000;
+            padding-left: 30px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body id="container">
+    <div id="overlay" class="png-fix">
+        <div id="header">
+            <div class="navbar-wrapper">
+                <div class="container">
+                    <div class="navbar navbar-inverse">
+                        <div class="navbar-inner">
+                            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+                            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+                            <a class="brand" href="#">Responsive SlideShow :)</a>
+                            <div id="nav" class="nav-collapse collapse">
+                                <ul>
+                                    <li><a href="indexThumb.html">3D Slide Thumb Img</a></li>
+                                    <li><a href="indexCube.html">3D Slide</a></li>
+                                    <li><a href="indexBackground.html">3D Slide Background</a></li>
+                                    <li class="active"><a href="index.html">3D Slide Automatic</a></li>
+                                </ul>
+                            </div>
+                            <!--/.nav-collapse -->
+                        </div>
+                        <!-- /.navbar-inner -->
+                    </div>
+                    <!-- /.navbar-inverse -->
+                </div>
+                <!-- /.container -->
+            </div>
+        </div>
+        <div class="container">
+            <div id="iview">
+                <div id="screen">
+                    <div id="command">
+                        <img src="img/top_ribbon.png" class="img-ribbon" alt="" />
+                        <div id="bar"></div>
+                    </div>
+                    <div id="urlInfo"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="copy">By <a href="#">Corsaro</a>.<br>Copyright &copy 2012. All rights reserved.More script and css style</div>
+
+    </div>
+    <script src="js/moveimgauto.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        /* ==== start script ==== */
+        setTimeout(function() {
+            m3D.init(
+                [{
+                        src: 'photo1.jpg'
+                    },
+                    {
+                        src: 'photo2.jpg'
+                    },
+                    {
+                        src: 'photo3.jpg'
+                    },
+                    {
+                        src: 'photo4.jpg'
+                    },
+                    {
+                        src: 'photo5.jpg'
+                    },
+                    {
+                        src: 'photo6.jpg'
+                    },
+                    {
+                        src: 'photo7.jpg'
+                    },
+                    {
+                        src: 'photo8.jpg'
+                    },
+                    {
+                        src: 'photo9.jpg'
+                    },
+                    {
+                        src: 'photo10.jpg'
+                    },
+                    {
+                        src: 'photo11.jpg'
+                    },
+                    {
+                        src: 'photo6.jpg'
+                    },
+                    {
+                        src: 'photo1.jpg'
+                    },
+                    {
+                        src: 'photo5.jpg'
+                    },
+                    {
+                        src: 'photo2.jpg'
+                    },
+                    {
+                        src: 'photo16.jpg'
+                    },
+
+                ]
+            );
+        }, 500);
+    </script>
+    <script src="js/bootstrap.js" type="text/javascript"></script>
+
+
+</body>
+
+</html>
