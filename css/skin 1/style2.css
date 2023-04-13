@@ -1,0 +1,104 @@
+#iview {
+    display: block;
+    max-width: 900px;
+    min-width: 300px;
+    height: 500px;
+    background: #000;
+    background: rgba(0, 0, 0, 1);
+    padding: 5px;
+    border-radius: 2px;
+    position: relative;
+    -webkit-box-shadow: 0 38px 30px -18px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 38px 30px -18px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 38px 30px -18px rgba(0, 0, 0, 0.5);
+    margin: 40px auto;
+    overflow: hidden;
+}
+
+#iview .iviewSlider {
+    display: block;
+    width: 900px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.iview-controlNav {
+    display: none;
+    bottom: 8%;
+    left: 40%;
+    height: 44px;
+}
+
+.iview-controlNav a {
+    text-indent: -9999px;
+}
+
+#iview-preloader {
+    border: #666 1px solid;
+    width: 180px;
+    margin-left: 350px;
+}
+
+#iview-preloader div {
+    background: #666;
+}
+
+.iview-controlNav div.iview-items ul li {
+    padding: 0px;
+    float: left;
+    width: 11px;
+    height: 12px;
+    margin: 3px;
+    margin-top: 16px;
+    line-height: 0px;
+}
+
+#iview #iview-tooltip {
+    display: none;
+    position: absolute;
+    background: url('../../img/tooltip.png') no-repeat;
+    width: 124px;
+    height: 90px;
+    bottom: 30px;
+    left: -67px;
+    padding: 10px;
+    z-index: 100;
+}
+
+#iview #iview-tooltip div.holder {
+    display: block;
+    width: 124px;
+    height: 84px;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+#iview #iview-tooltip div.holder div.container {
+    display: block;
+    width: 4000px;
+}
+
+#iview #iview-tooltip div.holder div.container div {
+    float: left;
+    display: block;
+    overflow: hidden;
+    width: 124px;
+    height: 84px;
+    left: -50%;
+    text-align: center;
+}
+
+#iview #iview-tooltip div.holder div.container div img {
+    height: 84px;
+    margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+    .iview-controlNav {
+        display: none;
+    }
+    .iview-hover {
+        height: 100px;
+    }
+}
